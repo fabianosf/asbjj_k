@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-
 from pathlib import Path
 import os
 
@@ -41,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "core",
     "accounts",
+    "crispy_forms",
+    "crispy_bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,7 @@ ROOT_URLCONF = "asbjj.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, 'templates')],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -120,8 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
 # Default primary key field type
@@ -130,6 +130,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # myproject/settings.py
-LOGIN_URL = 'login'
-LOGOUT_REDIRECT_URL = 'login'
-LOGIN_REDIRECT_URL = 'home'  # Substitua 'home' pela URL da sua página inicial
+LOGIN_URL = "login"
+LOGOUT_REDIRECT_URL = "login"
+LOGIN_REDIRECT_URL = "home"  # Substitua 'home' pela URL da sua página inicial
+
+# Config. Email
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'fabiano.freitas@gmail.com'
+EMAIL_HOST_PASSWORD = 'kgsozixaocyznksz'
+
+
+# Crispy Forms
+	
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
