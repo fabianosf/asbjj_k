@@ -24,17 +24,14 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             nome = form.cleaned_data["nome"]
-            email = form.cleaned_data["email"]
-            telefone = form.cleaned_data["telefone"]
-            
+            email = form.cleaned_data["email"]                      
             mensagem = form.cleaned_data["mensagem"]
 
             # Enviar o email
             send_mail(
                 f"Mensagem de {nome}",  # Assunto do email
                 mensagem,  # Mensagem
-                email,  # De (quem enviou)
-                telefone,
+                email,  # De (quem enviou)                
                 ["fabiano.freitas@gmail.com"],  # Para (seu email)
             )
 
