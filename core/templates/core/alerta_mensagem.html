@@ -1,24 +1,21 @@
+
 {% load static %}
 
+ 
 {% if messages %}
-  <div class="text-center">
-    
+  <div class="text-center">    
     {% for message in messages %}
-      
-        <div class="alert alert-{% if message.tags in 'error' %}danger{% elif message.tags in 'warning' %}warning{% elif message.tags in 'success' %}success{% endif %} alert-dismissible fade show mt-3" role="alert">
-
-            {% if  message.tags in 'error' %}
-                <i class="bi bi-hand-thumbs-down-fill"></i>
-                {{ message }}
-            {% elif message.tags in 'warning' %}
-                <i class="bi bi-exclamation-triangle"></i>
-                {{ message }}
-            {% elif message.tags in 'success' %}
-                <i class="bi bi-check-square"></i>
-                {{ message }}
-            {% endif %}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+      <div class="alert alert-{% if message.tags == 'error' %}danger{% elif message.tags == 'warning' %}warning{% elif message.tags == 'success' %}success{% endif %} alert-dismissible fade show" role="alert">
+        {% if message.tags == 'error' %}
+          <i class="bi bi-hand-thumbs-down-fill"></i>
+        {% elif message.tags == 'warning' %}
+          <i class="bi bi-exclamation-triangle"></i>
+        {% elif message.tags == 'success' %}
+          <i class="bi bi-check-square"></i>
+        {% endif %}
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
     {% endfor %}
   </div>
   <script>
@@ -29,6 +26,9 @@
         const alert = new bootstrap.Alert(alertNode);
         alert.close();
       }
-    }, 5000);
+    }, 3000);
   </script>
+
+
 {% endif %}
+
