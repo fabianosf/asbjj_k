@@ -25,7 +25,7 @@ def contact(request):
         if form.is_valid():
             nome = form.cleaned_data["nome"]
             email = form.cleaned_data["email"]
-            telefone = form.cleaned_data["telefone"]
+            
             
             mensagem = form.cleaned_data["mensagem"]
 
@@ -34,7 +34,7 @@ def contact(request):
                 f"Mensagem de {nome}",  # Assunto do email
                 mensagem,  # Mensagem
                 email,  # De (quem enviou)
-                telefone,
+                
                 ["fabiano.freitas@gmail.com"],  # Para (seu email)
             )
 
