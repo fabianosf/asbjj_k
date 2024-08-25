@@ -1,0 +1,33 @@
+
+        /* Estilo para todos os campos de entrada gerados pelo crispy-forms */
+        .form-control {
+            background-color: #ffff99; /* Cor de fundo amarela clara */
+            color: #333333; /* Cor do texto */
+            border: 1px solid #cccccc; /* Cor da borda */
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%; /* Largura total */
+        }
+
+        /* Estilo para o texto do placeholder */
+        .form-control::placeholder {
+            color: #666666; /* Cor do texto do placeholder */
+        }
+
+        /* Estilo específico para o botão de envio */
+        #submit-button {
+            background-color: #4CAF50; /* Cor de fundo verde */
+            color: white; /* Cor do texto */
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #submit-button:hover {
+            background-color: #45a049; /* Cor de fundo verde escuro ao passar o mouse */
+        }

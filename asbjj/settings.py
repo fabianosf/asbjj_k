@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "core",
     "accounts",
     "crispy_forms",
-    "crispy_bootstrap4",
+    "crispy_bootstrap4",   
 ]
 
 MIDDLEWARE = [
@@ -133,6 +133,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_URL = "login"
 LOGOUT_REDIRECT_URL = "login"
 LOGIN_REDIRECT_URL = "home"  # Substitua 'home' pela URL da sua página inicial
+
+
+
+
 
 # Config. Email
 
