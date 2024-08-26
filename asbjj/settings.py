@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "core",
     "accounts",
+    "contact",
     "crispy_forms",
     "crispy_bootstrap4",   
+    
 ]
 
 MIDDLEWARE = [
@@ -124,12 +126,25 @@ STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
+#STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static'),
+#    os.path.join(BASE_DIR, 'contact/static'),
+    
+#]
+
+
+
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# myproject/settings.py
+#Configuracao Aplicacao Local Django
 LOGIN_URL = "login"
 LOGOUT_REDIRECT_URL = "login"
 LOGIN_REDIRECT_URL = "home"  # Substitua 'home' pela URL da sua página inicial

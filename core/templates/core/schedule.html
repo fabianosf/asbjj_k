@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+
 <section class="schedule section" id="schedule">
     <div class="container">
       <div class="row">  
@@ -10,7 +11,7 @@
           <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">Horário de Aulas</h2>
         </div>  
         <div class="col-lg-12 py-5 col-md-12 col-12">
-          <table class="table table-bordered table-responsive schedule-table" data-aos="fade-up" data-aos-delay="300">
+          <table class="table table-bordered table-responsive schedule-table" data-aos="fade-up" data-aos-delay="600">
   
             <thead class="thead-light">
               <th><i class="fa fa-calendar"></i></th>
@@ -71,9 +72,9 @@
             </tbody>
           </table>
         </div>
-  
-      </div>
-    </div>
+        <img src="{% static 'images/logo_200.png' %}" class="img-fluid rounded d-block mx-auto" alt="Class">
+      </div>       
+    </div>   
   </section>
 
   {% endblock %}
