@@ -24,7 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-vk9i4nc_#u7nm(kaoiv9y7yg$v=!ckyhd^=8s10v0b4238(40y"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['92.113.33.16','localhost','127.0.0.1']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://asbjj.com.br',
+]
 
 ALLOWED_HOSTS = ['*']
 
@@ -164,5 +171,4 @@ EMAIL_HOST_PASSWORD = 'kgsozixaocyznksz'
 
 
 # Crispy Forms
-	
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

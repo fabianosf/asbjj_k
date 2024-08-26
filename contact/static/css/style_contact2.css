@@ -569,6 +569,8 @@ ul.mestre li a {
   display: block;
 }
 
+<<<<<<< HEAD
+=======
 /* background contate-nos */
 .set-bg {
 	background-repeat: no-repeat;
@@ -576,6 +578,7 @@ ul.mestre li a {
 	background-position: top center;
 }
 
+>>>>>>> refs/remotes/origin/master
 
 /*---------------------------------------
      CONTACT              
@@ -686,6 +689,8 @@ button#submit-button:hover {
 }
 
 
+<<<<<<< HEAD
+=======
 /* Fale conosco */
 
 
@@ -771,6 +776,7 @@ button#submit-button:hover {
 /* Fale conosco */
 
 
+>>>>>>> refs/remotes/origin/master
 /*---------------------------------------
      RESPONSIVE STYLES              
   -----------------------------------------*/
