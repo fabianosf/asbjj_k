@@ -3,6 +3,8 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.contrib import messages
 
+from contact.forms import ContactForm
+
 
 def home(request):
     context = {
@@ -19,48 +21,6 @@ def class_(request):
 def schedule(request):
     return render(request, "core/schedule.html")
 
-<<<<<<< HEAD
-=======
-''' 
-def modal(request):
-    return render(request, "core/modal.html")
-'''
-
-''' 
-
-def contact(request):
-    if request.method == "POST":
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            nome = form.cleaned_data["nome"]
-<<<<<<< HEAD
-            email = form.cleaned_data["email"]
-            
-            
-=======
-            email = form.cleaned_data["email"]                      
->>>>>>> refs/remotes/origin/master
-            mensagem = form.cleaned_data["mensagem"]
-
-            # Enviar o email
-            send_mail(
-                f"Mensagem de {nome}",  # Assunto do email
-                mensagem,  # Mensagem
-<<<<<<< HEAD
-                email,  # De (quem enviou)
-                
-=======
-                email,  # De (quem enviou)                
->>>>>>> refs/remotes/origin/master
-                ["fabiano.freitas@gmail.com"],  # Para (seu email)
-            )
-
-            return HttpResponse("Obrigado pelo contato!")
-    else:
-        form = ContactForm()
-
-    return render(request, "core/contact.html", {"form": form})
-'''
 
 def contact(request):
     if request.method == 'POST':
@@ -86,7 +46,7 @@ def contact(request):
         form = ContactForm()
 
     return render(request, 'core/contact.html', {'form': form})
->>>>>>> f5238b240b497312efdaab60b3835ab37262cda1
+
 
 
 
